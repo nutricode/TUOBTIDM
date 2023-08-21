@@ -1,7 +1,7 @@
 .modalBackground {
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.8); /* Dark mode background color */
   position: fixed;
   display: flex;
   justify-content: center;
@@ -12,7 +12,7 @@
   width: 500px;
   height: 200px;
   border-radius: 12px;
-  background-color: white;
+  background-color: #333; /* Dark mode background color */
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   display: flex;
   flex-direction: column;
@@ -47,6 +47,7 @@
   align-items: center;
   font-size: 1.7rem;
   text-align: center;
+  color: white; /* Dark mode text color */
 }
 
 .modalContainer .footer {
@@ -61,7 +62,7 @@
   height: 35px;
   margin: 10px;
   border: none;
-  background-color: cornflowerblue;
+  background-color: #2196f3; /* Dark mode button color */
   color: white;
   border-radius: 8px;
   font-size: 16px;
@@ -69,7 +70,7 @@
 }
 
 #cancelBtn {
-  background-color: crimson;
+  background-color: #f44336; /* Dark mode button color */
 }
 .address {
   display: block;
@@ -77,8 +78,11 @@
   height: 30px;
   width: 330px;
   text-align: center;
+  background-color: #555; /* Dark mode text field background color */
+  color: white; /* Dark mode text color */
 }
 
 input[type="text"]:focus {
-  background-color: lightblue;
+  background-color: #777; /* Dark mode focused text field background color */
+  color: white; /* Dark mode text color */
 }

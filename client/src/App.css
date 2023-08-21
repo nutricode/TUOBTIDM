@@ -1,3 +1,4 @@
+/* Main App Styling */
 .App {
   text-align: center;
 }
@@ -14,14 +15,14 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #333; /* Dark mode background color */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: white; /* Dark mode text color */
 }
 
 .App-link {
@@ -36,39 +37,56 @@
     transform: rotate(360deg);
   }
 }
+
 html {
   height: 100%;
 }
 
 body {
   margin: 0;
+  background-color: #333; /* Dark mode background color */
 }
 
+/* Background */
 .bg {
-  animation: slide 3s ease-in-out infinite alternate;
-  background-image: linear-gradient(-60deg, #6c3 50%, #09f 50%);
+  background-color: #353535; /* Dark mode background color */
   bottom: 0;
-  left: -50%;
-  opacity: 0.5;
+  left: 0;
   position: fixed;
-  right: -50%;
+  right: 0;
   top: 0;
   z-index: -1;
 }
 
-.bg2 {
-  animation-direction: alternate-reverse;
-  animation-duration: 4s;
+/* Mist effect */
+.mist {
+  animation: mistMovement 15s linear infinite alternate;
+  background: radial-gradient(rgba(255, 255, 255, 0.2), transparent);
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: -1;
 }
 
-.bg3 {
-  animation-duration: 5s;
+@keyframes mistMovement {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
 }
+
+
+
+
 
 .content {
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(0, 0, 0, 0.8); /* Dark mode background color */
   border-radius: 0.25em;
-  box-shadow: 0 0 0.25em rgba(0, 0, 0, 0.25);
+  box-shadow: 0 0 0.25em rgba(255, 255, 255, 0.25); /* Dark mode box shadow color */
   box-sizing: border-box;
   left: 50%;
   padding: 10vmin;
@@ -80,6 +98,7 @@ body {
 
 h1 {
   font-family: monospace;
+  color: white; /* Dark mode text color */
 }
 
 @keyframes slide {
@@ -96,9 +115,11 @@ h1 {
   margin: 0;
   box-sizing: border-box;
 }
+
 body {
   height: 900px;
 }
+
 header {
   text-align: center;
   width: 100%;
@@ -109,6 +130,7 @@ header {
   overflow: hidden;
   border-radius: 0 0 85% 85% / 30%;
 }
+
 header .overlay {
   width: 100%;
   height: 100%;
@@ -119,32 +141,39 @@ header .overlay {
 }
 
 h1 {
-  font-family: "Dancing Script", cursive;
+  font-family: "Segoe UI", cursive;
   font-size: 60px;
   margin-bottom: 30px;
 }
 
 h3,
 p {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Segoe UI", sans-serif;
   margin-bottom: 30px;
 }
+
 .share {
-  padding: 16px;
+  padding: 5px 15px; 
   margin-top: 10px;
-  vertical-align: center;
-  background: #f44336;
-  width: 70px;
-  height: 45px;
-  color: white;
+  background-color: #009FFD; /* Brighter blue background color */
+  color: #ffffff; /* Light text color */
   border: none;
-  border-radius: 4px;
-  font-size: 13px;
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  z-index: -1;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 3px 8px;
+  z-index: 1;
+  display: inline-flex; /* Ensuring the arrow and text are aligned */
+  align-items: center; /* Aligning items vertically centered */
+}
+
+.share:before {
+  content: "↪ "; /* Unicode arrow */
+  margin-right: 5px; /* Small space between the arrow and the text */
 }
 
 .share:hover {
-  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
-    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: rgba(0, 110, 253, 0.397) 0 3px 8px; 
 }
+
+
