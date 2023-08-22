@@ -1,0 +1,177 @@
+.top {
+    margin: 40px;
+  }
+  
+  input[type="file"] {
+    display: none;
+  }
+  
+  /* Base styles */
+  /* Base styles */
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  /* Dark Mode Styling */
+  body {
+    background-color: #1a1a1a; /* Dark background color */
+    color: #ffffff; /* Light text color */
+  }
+  
+  /* Button styles */
+  .button,
+  .choose,
+  .upload {
+    background-color: #009ffd; /* Primary button background color */
+    color: #ffffff; /* Light text color */
+    padding: 5px 15px; 
+    border: none;
+    font-size: 16px;
+    border-radius: 6px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+  }
+  
+  .button:hover,
+  .choose:hover,
+  .upload:hover {
+    box-shadow: rgba(0, 159, 253, 0.5) 0 3px 8px;
+  }
+  
+  /* Textarea styles */
+  .textArea {
+    color: #ffffff; 
+    background-color: #333; 
+    border: none;
+    border-radius: 6px;
+    padding: 10px;
+    resize: vertical;
+    width: 100%;
+    min-height: 150px;
+  }
+  
+  .textArea:focus {
+    background-color: #555; 
+  }
+  
+  /* Upload button styles */
+  .upload {
+    border: 1px solid #13aa52;
+    background-color: #13aa52;
+    color: #ffffff;
+    padding: 5px 15px; 
+    border-radius: 6px;
+    margin-left: 10px;
+  }
+  
+  .upload:hover {
+    border: 1px solid #13aa52;
+    background-color: #1ead6b; /* Slightly darker green on hover */
+    color: #ffffff;
+  }
+  
+  .upload:disabled,
+  .upload[disabled] {
+    border: 1px solid #999999;
+    background-color: #cccccc;
+    color: #666666;
+    cursor: not-allowed;
+  }
+  
+  
+  div {
+    padding: 5px 10px;
+  }
+  Modal.css
+.modalBackground {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8); /* Dark mode background color */
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modalContainer {
+  width: 500px;
+  height: 200px;
+  border-radius: 12px;
+  background-color: #333; /* Dark mode background color */
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+}
+
+.modalContainer {
+  display: inline-block;
+  text-align: center;
+}
+.title {
+  display: inline-block;
+  text-align: center;
+}
+
+.titleCloseBtn {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.titleCloseBtn button {
+  background-color: transparent;
+  border: none;
+  font-size: 1px;
+  cursor: pointer;
+}
+
+.modalContainer .body {
+  flex: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.7rem;
+  text-align: center;
+  color: white; /* Dark mode text color */
+}
+
+.modalContainer .footer {
+  flex: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modalContainer .footer button {
+  width: 100px;
+  height: 35px;
+  margin: 10px;
+  border: none;
+  background-color: #2196f3; /* Dark mode button color */
+  color: white;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#cancelBtn {
+  background-color: #f44336; /* Dark mode button color */
+}
+.address {
+  display: block;
+  margin: auto;
+  height: 30px;
+  width: 330px;
+  text-align: center;
+  background-color: #555; /* Dark mode text field background color */
+  color: white; /* Dark mode text color */
+}
+
+input[type="text"]:focus {
+  background-color: #777; /* Dark mode focused text field background color */
+  color: white; /* Dark mode text color */
+}

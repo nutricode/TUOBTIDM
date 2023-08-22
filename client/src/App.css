@@ -1,3 +1,4 @@
+
 /* Main App Styling */
 .App {
   text-align: center;
@@ -26,7 +27,8 @@
 }
 
 .App-link {
-  color: #61dafb;
+  color: #ffffff;
+  text-decoration: none !important;
 }
 
 @keyframes App-logo-spin {
@@ -40,11 +42,13 @@
 
 html {
   height: 100%;
+  text-decoration: none !important;
 }
 
 body {
   margin: 0;
   background-color: #333; /* Dark mode background color */
+  text-decoration: none !important;
 }
 
 /* Background */
@@ -56,28 +60,10 @@ body {
   right: 0;
   top: 0;
   z-index: -1;
+  text-decoration: none !important;
 }
 
-/* Mist effect */
-.mist {
-  animation: mistMovement 15s linear infinite alternate;
-  background: radial-gradient(rgba(255, 255, 255, 0.2), transparent);
-  bottom: 0;
-  left: 0;
-  position: fixed;
-  right: 0;
-  top: 0;
-  z-index: -1;
-}
 
-@keyframes mistMovement {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(10px);
-  }
-}
 
 
 
@@ -94,11 +80,13 @@ body {
   text-align: center;
   top: 50%;
   transform: translate(-50%, -50%);
+  text-decoration: none !important;
 }
 
 h1 {
   font-family: monospace;
   color: white; /* Dark mode text color */
+  text-decoration: none !important;
 }
 
 @keyframes slide {
@@ -118,6 +106,7 @@ h1 {
 
 body {
   height: 900px;
+  text-decoration: none !important;
 }
 
 header {
@@ -144,12 +133,14 @@ h1 {
   font-family: "Segoe UI", cursive;
   font-size: 60px;
   margin-bottom: 30px;
+  text-decoration: none !important;
 }
 
 h3,
 p {
   font-family: "Segoe UI", sans-serif;
   margin-bottom: 30px;
+  text-decoration: none !important;
 }
 
 .share {
@@ -175,5 +166,3 @@ p {
 .share:hover {
   box-shadow: rgba(0, 110, 253, 0.397) 0 3px 8px; 
 }
-
-

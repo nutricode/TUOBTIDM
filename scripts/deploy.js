@@ -1,12 +1,12 @@
 const hre = require("hardhat");
 
 async function main() {
-  const Upload = await hre.ethers.getContractFactory("Upload");
-  const upload = await Upload.deploy();
+  const DocumentManagement = await hre.ethers.getContractFactory("DocumentManagement");
+  const documentManagement = await DocumentManagement.deploy();
 
-  await upload.deployed();
+  await documentManagement.deployed();
 
-  console.log("Library deployed to:", upload.address);
+  console.log("Contract deployed to:", documentManagement.address);
 }
 
 main().catch((error) => {

@@ -1,69 +1,85 @@
 /* Base styles */
+@import "~font-awesome/css/font-awesome.min.css";
+
 body {
-  margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
-}
-
-/* Dark Mode Styling */
-body {
-  background-color: #1a1a1a; /* Dark background color */
-  color: #ffffff; /* Light text color */
-}
-
-.image-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  grid-gap: 10px;
-  grid-auto-rows: 350px;
-  margin: 10px;
-}
-
-.image-list img {
-  width: 250px;
-  height: 350px;
-  object-fit: cover;
-  border-radius: 6px;
-}
-
-.center {
-  margin: 40px;
-}
-
-.button {
-  background-color: #009ffd; /* Primary button background color */
-  color: #ffffff; /* Light text color */
-  padding: 5px 10px;
-  border: none;
-  font-size: 16px;
-  border-radius: 6px;
-  margin-right: 10px;
-  margin-bottom: 10px;
-  cursor: pointer;
-}
-
-.button:hover {
-  box-shadow: rgba(0, 159, 253, 0.5) 0 3px 8px;
-}
-
-.address {
-  display: block;
-  margin: auto;
-  height: 30px;
-  width: 330px;
-  text-align: center;
-  padding: 5px;
-  border: none;
-  border-radius: 6px;
-  background-color: #333; /* Dark input background color */
-  color: #ffffff; /* Light text color */
-}
-
-input[type="text"]:focus {
-  background-color: #555; /* Slightly lighter input background color on focus */
-}
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-decoration: none !important;
+  }
+  
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+    text-decoration: none;
+  }
+  
+  /* Dark Mode Styling */
+  body {
+    background-color: #1a1a1a; /* Dark background color */
+    color: #ffffff; /* Light text color */
+    text-decoration: none;
+  }
+  
+  .image-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 10px;
+    grid-auto-rows: 350px;
+    margin: 10px;
+    text-decoration: none;
+    margin-bottom: 10px; /* Adjust the value as per your needs */
+  }
+  
+  .image-list img {
+    width: 250px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 6px;
+    text-decoration: none;
+  }
+  
+  .center {
+    margin: 40px;
+    text-decoration: none;
+  }
+  
+  .button,
+    .choose,
+    .upload {
+      background-color: #009ffd; /* Primary button background color */
+      color: #ffffff; /* Light text color */
+      padding: 5px 15px; 
+      border: none;
+      font-size: 16px;
+      border-radius: 6px;
+      margin-bottom: 10px;
+      margin-top: 20px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    
+    .button:hover,
+    .choose:hover,
+    .upload:hover {
+      box-shadow: rgba(0, 159, 253, 0.5) 0 3px 8px;
+    }
+  
+  .address {
+    display: block;
+    margin: auto;
+    height: 30px;
+    width: 330px;
+    text-align: center;
+    padding: 5px;
+    border: none;
+    border-radius: 6px;
+    background-color: #333; /* Dark input background color */
+    color: #ffffff; /* Light text color */
+    text-decoration: none;
+  }
+  
+  input[type="text"]:focus {
+    text-decoration: none;
+    background-color: #555; /* Slightly lighter input background color on focus */
+  }

@@ -6,6 +6,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  text-decoration: none;
 }
 
 .modalContainer {
@@ -17,20 +18,24 @@
   display: flex;
   flex-direction: column;
   padding: 25px;
+  text-decoration: none;
 }
 
 .modalContainer {
   display: inline-block;
   text-align: center;
+  text-decoration: none;
 }
 .title {
   display: inline-block;
   text-align: center;
+  text-decoration: none;
 }
 
 .titleCloseBtn {
   display: flex;
   justify-content: flex-end;
+  text-decoration: none;
 }
 
 .titleCloseBtn button {
@@ -38,6 +43,7 @@
   border: none;
   font-size: 1px;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .modalContainer .body {
@@ -48,12 +54,14 @@
   font-size: 1.7rem;
   text-align: center;
   color: white; /* Dark mode text color */
+  text-decoration: none;
 }
 
 .modalContainer .footer {
   flex: 20%;
   display: flex;
   justify-content: center;
+  text-decoration: none;
   align-items: center;
 }
 
@@ -67,10 +75,12 @@
   border-radius: 8px;
   font-size: 16px;
   cursor: pointer;
+  text-decoration: none;
 }
 
 #cancelBtn {
   background-color: #f44336; /* Dark mode button color */
+  text-decoration: none;
 }
 .address {
   display: block;
@@ -80,9 +90,11 @@
   text-align: center;
   background-color: #555; /* Dark mode text field background color */
   color: white; /* Dark mode text color */
+  text-decoration: none;
 }
 
 input[type="text"]:focus {
   background-color: #777; /* Dark mode focused text field background color */
   color: white; /* Dark mode text color */
+  text-decoration: none;
 }
