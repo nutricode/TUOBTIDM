@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { ethers } from "ethers";
 import Upload from "./components/Upload";
 import Display from "./components/Display";
-import Modal from "./components/Modal";
+import Nav from "./components/Nav";
 import "./App.css";
 
 function App() {
@@ -58,36 +58,25 @@ function App() {
 
   return (
     <>
-      {!modalOpen && (
-        <button className="share" onClick={() => setModalOpen(true)}>
-          Share
-        </button>
-      )}
-      {modalOpen && (
-        <Modal setModalOpen={setModalOpen} contract={contract}></Modal>
-      )}
 
       <div className="App">
+        <Nav 
+          account={account}
+          provider={provider}
+          contract={contract}
+          onUploadSuccess={getdata}
+        />
         <h1 style={{ color: "white" }}>The Use of Blockchain Technology in Document Management</h1>
         <div className="bg"></div>
         <div className="bg bg2"></div>
         <div className="bg bg3"></div>
 
-        <p style={{ color: account ? "#32CD32" : "red" }}> 
-            Account : {account ? account : "Not connected"} 
-        </p>
-
-        <Upload
-      account={account}
-      provider={provider}
-      contract={contract}
-      onUploadSuccess={getdata} // Pass the getdata function
-    ></Upload>
-    <Display
-      contract={contract}
-      account={account}
-      triggerFetch={triggerFetch} // Pass the triggerFetch state
-    ></Display>
+       
+        <Display
+          contract={contract}
+          account={account}
+          triggerFetch={triggerFetch} // Pass the triggerFetch state
+        ></Display>
       </div>
     </>
   );

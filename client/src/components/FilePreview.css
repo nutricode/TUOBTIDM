@@ -16,6 +16,8 @@
   overflow: hidden;
   text-decoration: none !important;
   margin-top: -20px;
+  
+  z-index: -1;
 }
 
 .file-preview::before {

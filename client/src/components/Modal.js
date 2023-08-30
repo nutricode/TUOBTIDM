@@ -35,7 +35,7 @@ const Modal = ({ setModalOpen, contract }) => {
             ></input>
           </div>
           <form id="myForm">
-            <select id="selectNumber">
+            <select id="selectNumber" class="modal-select">
               <option className="address">People With Access</option>
             </select>
           </form>

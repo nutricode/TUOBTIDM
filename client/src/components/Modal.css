@@ -7,11 +7,16 @@
   justify-content: center;
   align-items: center;
   text-decoration: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
 }
 
 .modalContainer {
-  width: 500px;
-  height: 200px;
+  width: 500px;   
+  min-height: 200px;
+  height: fit-content;
   border-radius: 12px;
   background-color: #333; /* Dark mode background color */
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -87,6 +92,7 @@
   margin: auto;
   height: 30px;
   width: 330px;
+  padding: 20px 0px;
   text-align: center;
   background-color: #555; /* Dark mode text field background color */
   color: white; /* Dark mode text color */
@@ -97,4 +103,36 @@ input[type="text"]:focus {
   background-color: #777; /* Dark mode focused text field background color */
   color: white; /* Dark mode text color */
   text-decoration: none;
+}
+
+.modal-select{
+  background: #999999;
+  padding: 5px 15px;
+  border-radius: 20px;
+  margin: 10px;
+}
+.nav-col-3 {
+  display: flex;
+  align-items: center;
+  align-content: center;
+}
+.body-text{
+  height: 60vh;
+  overflow-y: auto;
+  overflow-wrap: break-word;
+}
+button.btn {
+  padding: 5px 15px;
+  margin-top: 10px;
+  background-color: #009FFD;
+  color: #ffffff;
+  border: none;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 3px 8px;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  margin: 10px;
 }
