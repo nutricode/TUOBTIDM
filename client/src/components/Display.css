@@ -43,27 +43,7 @@ body {
     margin: 40px;
     text-decoration: none;
   }
-  
-  .button,
-    .choose,
-    .upload {
-      background-color: #009ffd; /* Primary button background color */
-      color: #ffffff; /* Light text color */
-      padding: 5px 15px; 
-      border: none;
-      font-size: 16px;
-      border-radius: 6px;
-      margin-bottom: 10px;
-      margin-top: 20px;
-      cursor: pointer;
-      text-decoration: none;
-    }
-    
-    .button:hover,
-    .choose:hover,
-    .upload:hover {
-      box-shadow: rgba(0, 159, 253, 0.5) 0 3px 8px;
-    }
+
   
   .address {
     display: block;

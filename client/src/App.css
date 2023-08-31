@@ -153,26 +153,38 @@ p {
   text-decoration: none !important;
 }
 
-.share {
-  padding: 5px 15px; 
-  margin-top: 10px;
-  background-color: #009FFD; /* Brighter blue background color */
-  color: #ffffff; /* Light text color */
+
+button {
+  padding: 10px 20px;
   border: none;
   font-size: 16px;
-  border-radius: 6px;
   cursor: pointer;
   box-shadow: rgba(0, 0, 0, 0.2) 0 3px 8px;
-  z-index: 1;
-  display: inline-flex; /* Ensuring the arrow and text are aligned */
-  align-items: center; /* Aligning items vertically centered */
+  border-radius: 6px;
 }
 
-.share:before {
-  content: "↪ "; /* Unicode arrow */
-  margin-right: 5px; /* Small space between the arrow and the text */
+button.blue {
+  background-color: #009FFD;
+  color: white;
 }
 
-.share:hover {
-  box-shadow: rgba(0, 110, 253, 0.397) 0 3px 8px; 
+button.red {
+  background-color: #f44336;
+  color: white;
+}
+
+button.loading {
+  /* loading styles */
+  background-image: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
 }

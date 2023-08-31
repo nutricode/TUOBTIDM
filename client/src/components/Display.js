@@ -49,7 +49,7 @@ const Display = ({ contract, account, triggerFetch }) => {
         value={addressInputTemp}
         onChange={handleAddressInputChange}
       />
-      <button className="center button" onClick={handleAddressInputChangeSubmit}>
+      <button className="blue" onClick={handleAddressInputChangeSubmit}>
         Get Data
       </button>
     </>

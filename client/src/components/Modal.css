@@ -18,39 +18,21 @@
   min-height: 200px;
   height: fit-content;
   border-radius: 12px;
-  background-color: #333; /* Dark mode background color */
+  background-color: #333;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  display: flex;
+  display: inline-block; /* moved here */
   flex-direction: column;
   padding: 25px;
+  text-align: center;  /* moved here */
   text-decoration: none;
 }
 
-.modalContainer {
-  display: inline-block;
-  text-align: center;
-  text-decoration: none;
-}
 .title {
   display: inline-block;
   text-align: center;
   text-decoration: none;
-  font-size: 30;
 }
 
-.titleCloseBtn {
-  display: flex;
-  justify-content: flex-end;
-  text-decoration: none;
-}
-
-.titleCloseBtn button {
-  background-color: transparent;
-  border: none;
-  font-size: 1px;
-  cursor: pointer;
-  text-decoration: none;
-}
 
 .modalContainer .body {
   flex: 50%;
@@ -71,23 +53,7 @@
   align-items: center;
 }
 
-.modalContainer .footer button {
-  width: 100px;
-  height: 35px;
-  margin: 10px;
-  border: none;
-  background-color: #2196f3; /* Dark mode button color */
-  color: white;
-  border-radius: 8px;
-  font-size: 16px;
-  cursor: pointer;
-  text-decoration: none;
-}
 
-#cancelBtn {
-  background-color: #f44336; /* Dark mode button color */
-  text-decoration: none;
-}
 .address {
   display: block;
   margin: auto;
@@ -122,21 +88,7 @@ input[type="text"]:focus {
   overflow-y: auto;
   overflow-wrap: break-word;
 }
-button.btn {
-  padding: 5px 15px;
-  margin-top: 10px;
-  background-color: #009FFD;
-  color: #ffffff;
-  border: none;
-  font-size: 16px;
-  border-radius: 6px;
-  cursor: pointer;
-  box-shadow: rgba(0, 0, 0, 0.2) 0 3px 8px;
-  z-index: 1;
-  display: inline-flex;
-  align-items: center;
-  margin: 10px;
-}
+
 
 .link {
   color: inherit;
