@@ -1,0 +1,138 @@
+.modalBackground {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8); /* Dark mode background color */
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+  }
+  
+  .modalContainer {
+    width: 500px;   
+    min-height: 200px;
+    height: fit-content;
+    border-radius: 12px;
+    background-color: #333; /* Dark mode background color */
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    text-decoration: none;
+  }
+  
+  .modalContainer {
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+  }
+  .title {
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+  }
+  
+  .titleCloseBtn {
+    display: flex;
+    justify-content: flex-end;
+    text-decoration: none;
+  }
+  
+  .titleCloseBtn button {
+    background-color: transparent;
+    border: none;
+    font-size: 1px;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  
+  .modalContainer .body {
+    flex: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.7rem;
+    text-align: center;
+    color: white; /* Dark mode text color */
+    text-decoration: none;
+  }
+  
+  .modalContainer .footer {
+    flex: 20%;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    align-items: center;
+  }
+  
+  .modalContainer .footer button {
+    width: 100px;
+    height: 35px;
+    margin: 10px;
+    border: none;
+    background-color: #2196f3; /* Dark mode button color */
+    color: white;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  
+  #cancelBtn {
+    background-color: #f44336; /* Dark mode button color */
+    text-decoration: none;
+  }
+  .address {
+    display: block;
+    margin: auto;
+    height: 30px;
+    width: 330px;
+    padding: 20px 0px;
+    text-align: center;
+    background-color: #555; /* Dark mode text field background color */
+    color: white; /* Dark mode text color */
+    text-decoration: none;
+  }
+  
+  input[type="text"]:focus {
+    background-color: #777; /* Dark mode focused text field background color */
+    color: white; /* Dark mode text color */
+    text-decoration: none;
+  }
+  
+  .modal-select{
+    background: #999999;
+    padding: 5px 15px;
+    border-radius: 20px;
+    margin: 10px;
+  }
+  .nav-col-3 {
+    display: flex;
+    align-items: center;
+    align-content: center;
+  }
+  .body-text{
+    min-height: 20vh;
+  max-height: 60vh;
+  overflow-y: auto;
+  }
+  button.btn {
+    padding: 5px 15px;
+    margin-top: 10px;
+    background-color: #009FFD;
+    color: #ffffff;
+    border: none;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 3px 8px;
+    z-index: 1;
+    display: inline-flex;
+    align-items: center;
+    margin: 10px;
+  }

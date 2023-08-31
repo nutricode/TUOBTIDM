@@ -35,6 +35,7 @@
   display: inline-block;
   text-align: center;
   text-decoration: none;
+  font-size: 30;
 }
 
 .titleCloseBtn {
@@ -135,4 +136,24 @@ button.btn {
   display: inline-flex;
   align-items: center;
   margin: 10px;
+}
+
+.link {
+  color: inherit;
+  text-decoration: underline;
+}
+
+.instruction-title {
+  margin-top: 20px;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.instruction-list {
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+.justify-text {
+  text-align: justify;
 }
