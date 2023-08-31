@@ -5,6 +5,7 @@ import FilePreview from "./FilePreview";
 const Display = ({ contract, account, triggerFetch }) => {
   const [data, setData] = useState([]);
   const [addressInput, setAddressInput] = useState("");
+  const [addressInputTemp, setAddressInputTemp] = useState("");
 
   const fetchData = useCallback(async () => {  // <-- wrap the function with useCallback
     try {
@@ -19,6 +20,7 @@ const Display = ({ contract, account, triggerFetch }) => {
     }
   }, [addressInput, account, contract]);  // <-- dependencies of fetchData
 
+
   useEffect(() => {
     if (triggerFetch) {
       fetchData();
@@ -32,9 +34,11 @@ const Display = ({ contract, account, triggerFetch }) => {
   }, [account, fetchData]);  // <-- add fetchData to dependency array
 
   const handleAddressInputChange = (e) => {
-    setAddressInput(e.target.value);
+    setAddressInputTemp(e.target.value);
   };
-
+  const handleAddressInputChangeSubmit = (e) => {
+    setAddressInput(addressInputTemp);
+  };
   return (
     <>
       <div className="image-list">{data}</div>
@@ -42,10 +46,10 @@ const Display = ({ contract, account, triggerFetch }) => {
         type="text"
         placeholder="Enter Address"
         className="address"
-        value={addressInput}
+        value={addressInputTemp}
         onChange={handleAddressInputChange}
       />
-      <button className="center button" onClick={fetchData}>
+      <button className="center button" onClick={handleAddressInputChangeSubmit}>
         Get Data
       </button>
     </>
