@@ -62,7 +62,7 @@ const Nav = ({ contract, account, provider, onUploadSuccess }) => {
                     Share
                 </button>
                 {modalOpen && (
-                <Modal setModalOpen={setModalOpen} contract={contract}></Modal>
+                  <Modal setModalOpen={setModalOpen} contract={contract} account={account}></Modal>
                 )}
             </div>
 
