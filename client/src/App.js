@@ -61,7 +61,7 @@ function App() {
   if (!isMetaMaskInstalled) {
     return (
       <div className="metamask-required">
-        <div class="content">
+        <div className="content-metamask">
         <h1>Please install 
           <a href="https://metamask.io/" target="_blank" rel="noopener noreferrer"> 
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 172 33">
@@ -70,7 +70,7 @@ function App() {
           </a> 
            to use this application.</h1>
            </div>
-           <h4 class="footer-sticky">
+           <h4 className="footer-sticky">
             Alexei Paul - Univ. "Ovidius" Constanța
            </h4>
       </div>
@@ -86,11 +86,17 @@ function App() {
           contract={contract}
           onUploadSuccess={getdata}
         />
-        <h1 style={{ color: "white" }}>The Use of Blockchain Technology in Document Management</h1>
-        <div className="bg"></div>
-        <div className="bg bg2"></div>
-        <div className="bg bg3"></div>
-
+        <h1 style={{
+            fontSize: "80px", 
+            width: "100%", 
+            letterSpacing: "20px",
+            marginLeft: "10px",
+            marginTop:"-5px" 
+          }}>
+            TUoBTiDM
+          </h1>
+        <h3 style={{ color: "white", marginTop:"-30px"}}>The Use of Blockchain Technology in Document Management</h3>
+        
         <Display
           contract={contract}
           account={account}

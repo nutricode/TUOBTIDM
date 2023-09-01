@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import "./Modal.css";
 
 const ModalHelp = ({ setModalOpen }) => {
@@ -8,7 +7,6 @@ const ModalHelp = ({ setModalOpen }) => {
         <div className="modalContainer">
           <div className="title"></div>
           <div className="body-text justify-text">
-            <h4 className="instruction-title"></h4>
             <h5 className="instruction-title">Connecting to Sepolia Testnet on MetaMask:</h5>
             <p>Follow the instructions on <a className="link" href="https://www.alchemy.com/overviews/how-to-add-sepolia-to-metamask" target="_blank" rel="noopener noreferrer">this guide</a> to add Sepolia to your MetaMask wallet.</p>
             
@@ -48,7 +46,7 @@ const ModalHelp = ({ setModalOpen }) => {
           </div>
 
           <div className="footer">
-            <button
+            <button className="button button-red"
               onClick={() => {
                 setModalOpen(false);
               }}

@@ -1,5 +1,28 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
 
-/* Main App Styling */
+html, body {
+  height: 100%;
+  margin: 0;
+  background-color: #333; 
+  color: white; 
+}
+
+h1 {
+  font-family: "Segoe UI", cursive;
+  font-size: 60px;
+  margin-bottom: 30px;
+}
+
+h3, p {
+  font-family: "Segoe UI", sans-serif;
+  margin-bottom: 30px;
+}
+
 .App {
   text-align: center;
 }
@@ -9,114 +32,30 @@
   pointer-events: none;
 }
 
-nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  align-content: center;
-  flex-wrap: nowrap;
-  flex-direction: row;
-}
-
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
-  background-color: #333; /* Dark mode background color */
+  background-color: #333; 
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white; /* Dark mode text color */
 }
 
 .App-link {
   color: #ffffff;
-  text-decoration: none !important;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-html {
-  height: 100%;
-  text-decoration: none !important;
-}
-
-body {
-  margin: 0;
-  background-color: #333; /* Dark mode background color */
-  text-decoration: none !important;
-}
-
-/* Background */
-.bg {
-  background-color: #353535; /* Dark mode background color */
-  bottom: 0;
-  left: 0;
-  position: fixed;
-  right: 0;
-  top: 0;
-  z-index: -1;
-  text-decoration: none !important;
-}
-
-
-
-
-
-
 
 .content {
-  background-color: rgba(0, 0, 0, 0.8); /* Dark mode background color */
+  background-color: rgba(0, 0, 0, 0.8);
   border-radius: 0.25em;
-  box-shadow: 0 0 0.25em rgba(255, 255, 255, 0.25); /* Dark mode box shadow color */
-  box-sizing: border-box;
+  box-shadow: 0 0 0.25em rgba(255, 255, 255, 0.25); 
+  position: fixed;
+  top: 50%;
   left: 50%;
   padding: 10vmin;
-  position: fixed;
   text-align: center;
-  top: 50%;
   transform: translate(-50%, -50%);
-  text-decoration: none !important;
-}
-
-h1 {
-  font-family: monospace;
-  color: white; /* Dark mode text color */
-  text-decoration: none !important;
-}
-
-@keyframes slide {
-  0% {
-    transform: translateX(-25%);
-  }
-  100% {
-    transform: translateX(25%);
-  }
-}
-
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
-body {
-  height: 900px;
-  text-decoration: none !important;
 }
 
 header {
@@ -139,45 +78,57 @@ header .overlay {
   background-image: linear-gradient(135deg, #9f05ff69 10%, #fd5e086b 100%);
 }
 
-h1 {
-  font-family: "Segoe UI", cursive;
-  font-size: 60px;
-  margin-bottom: 30px;
-  text-decoration: none !important;
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
 }
 
-h3,
-p {
-  font-family: "Segoe UI", sans-serif;
-  margin-bottom: 30px;
-  text-decoration: none !important;
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
 
+@keyframes slide {
+  0% { transform: translateX(-25%); }
+  100% { transform: translateX(25%); }
+}
 
-button {
+.button {
   padding: 10px 20px;
   border: none;
   font-size: 16px;
   cursor: pointer;
-  box-shadow: rgba(0, 0, 0, 0.2) 0 3px 8px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0 3px 8px;
   border-radius: 6px;
+  width: 120px;  
+  height: 40px;  
+  text-align: center; 
+  display: inline-block; 
+  margin-right: 12px;
+  margin-bottom: 30px;
 }
 
-button.blue {
+.button-blue {
   background-color: #009FFD;
   color: white;
 }
+.button-blue:hover {
+  background-color: #0082cc; 
+}
 
-button.red {
+.button-red {
   background-color: #f44336;
   color: white;
 }
+.button-red:hover {
+  background-color: #e32e1d; 
+}
 
-button.loading {
-  /* loading styles */
-  background-image: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+.button-loading {
+  background-image: linear-gradient(90deg, transparent, rgba(0, 159, 253, 0.1), transparent);
   background-size: 200% 100%;
-  animation: loading 1.5s infinite;
+  animation: loading 1.5s infinite linear;
 }
 
 @keyframes loading {
@@ -187,4 +138,56 @@ button.loading {
   100% {
     background-position: -200% 0;
   }
+}
+
+.button:disabled {
+  background-color: #cccccc;
+  color: #666666;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.metamask-required {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content-metamask {
+  background-color: rgba(0, 0, 0, 0.8); 
+  border-radius: 0.25em;
+  box-shadow: 0 0 0.25em rgba(255, 255, 255, 0.25); 
+  box-sizing: border-box;
+  left: 50%;
+  padding: 10vmin;
+  position: fixed;
+  text-align: center;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-decoration: none !important;
+  
+  width: 70%;
+  height: 70%;
+  background-color: rgba(114, 114, 114, 0.7);
+  text-align: center;
+  overflow: auto;
+  box-shadow: 0px 0px 10px 3px #ffffff; 
+  border: 2px solid #ffffff;
+}
+
+.footer-sticky {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-weight: normal;
+  font-size: 10;
+  color: rgba(255, 255, 255, 0.158);
+  z-index: 1000;
 }

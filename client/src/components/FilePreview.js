@@ -21,9 +21,9 @@ const FilePreview = ({ file }) => {
         return <i className="fa fa-file-excel-o" aria-hidden="true"></i>;
       case "txt":
         return <i className="fa fa-file-text-o" aria-hidden="true"></i>;
-      // add more cases for other file extensions as needed
+      
       default:
-        return <i className="fa fa-file-o" aria-hidden="true"></i>;  // generic file icon
+        return <i className="fa fa-file-o" aria-hidden="true"></i>;  
     }
   };
 

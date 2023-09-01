@@ -1,4 +1,4 @@
-/* Base styles */
+
 @import "~font-awesome/css/font-awesome.min.css";
 
 body {
@@ -14,10 +14,10 @@ body {
     text-decoration: none;
   }
   
-  /* Dark Mode Styling */
+
   body {
-    background-color: #1a1a1a; /* Dark background color */
-    color: #ffffff; /* Light text color */
+    background-color: #1a1a1a; 
+    color: #ffffff; 
     text-decoration: none;
   }
   
@@ -28,7 +28,7 @@ body {
     grid-auto-rows: 350px;
     margin: 10px;
     text-decoration: none;
-    margin-bottom: 10px; /* Adjust the value as per your needs */
+    margin-bottom: 10px; 
   }
   
   .image-list img {
@@ -54,12 +54,12 @@ body {
     padding: 5px;
     border: none;
     border-radius: 6px;
-    background-color: #333; /* Dark input background color */
-    color: #ffffff; /* Light text color */
+    background-color: #333; 
+    color: #ffffff; 
     text-decoration: none;
   }
   
   input[type="text"]:focus {
     text-decoration: none;
-    background-color: #555; /* Slightly lighter input background color on focus */
+    background-color: #555; 
   }

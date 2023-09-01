@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './Upload.css';
+import '../App.css'
 
 const Upload = ({ contract, account, onUploadSuccess }) => {
   const [isLoading, setIsLoading] = useState(false);
@@ -64,17 +65,15 @@ const Upload = ({ contract, account, onUploadSuccess }) => {
   return (
       <div className="top">
         <form className="form">
-          <label
-            htmlFor="file-upload"
-            className="choose"
-            style={{
-              pointerEvents: isLoading ? 'none' : 'auto',
-              backgroundColor: isLoading ? '#ff9900' : '',  // Bitcoin orange when loading
-              color: isLoading ? 'black' : '',  // Text color when loading
-              minWidth: '250px',  // Minimum width to accommodate longest text
-            }}
+        <label
+          htmlFor="file-upload"
+          className={`button ${isLoading ? 'button-loading' : 'button-blue'}`}
+              style={{
+                pointerEvents: isLoading ? 'none' : 'auto',
+                marginRight: "2px",
+              }}
           >
-            {isLoading ? `Uploading${dots}` : 'Upload File'}
+              {isLoading ? `Uploading${dots}` : 'Upload File'}
           </label>
           <input
             disabled={isLoading || !account}
@@ -82,9 +81,9 @@ const Upload = ({ contract, account, onUploadSuccess }) => {
             id="file-upload"
             name="data"
             onChange={retrieveAndUploadFile}
-            style={{
+            style={{ 
               pointerEvents: isLoading ? 'none' : 'auto',
-              minWidth: '250px',  // Minimum width to accommodate longest text
+              marginRight: "2px",
             }}
           />
         </form>

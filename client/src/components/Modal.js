@@ -40,7 +40,7 @@ const Modal = ({ setModalOpen, contract }) => {
             </select>
           </form>
           <div className="footer">
-            <button className="red"
+            <button className="button button-red"
               onClick={() => {
                 setModalOpen(false);
               }}
@@ -48,7 +48,7 @@ const Modal = ({ setModalOpen, contract }) => {
             >
               Cancel
             </button>
-            <button className="blue" onClick={() => sharing()}>Share</button>
+            <button className="button button-blue" onClick={() => sharing()}>Share</button>
           </div>
         </div>
       </div>

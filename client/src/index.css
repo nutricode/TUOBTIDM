@@ -5,8 +5,8 @@ body {
       sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-color: #1e1e1e; /* Dark background color */
-    color: #ffffff; /* Light text color */
+    background-color: #1e1e1e; 
+    color: #ffffff; 
     text-decoration: none;
   }
   
@@ -14,9 +14,6 @@ body {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
       monospace;
       text-decoration: none;
-    color: #c0c0c0; /* Light gray code color */
+    color: #c0c0c0; 
   }
   
-  /* Additional Dark Mode Styling for Specific Elements */
-  /* Feel free to add any additional styling you need for dark mode */
- 

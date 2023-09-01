@@ -1,7 +1,7 @@
 .modalBackground {
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.8); /* Dark mode background color */
+  background-color: rgba(0, 0, 0, 0.8); 
   position: fixed;
   display: flex;
   justify-content: center;
@@ -14,16 +14,16 @@
 }
 
 .modalContainer {
-  width: 500px;   
+  width: 550px;   
   min-height: 200px;
   height: fit-content;
   border-radius: 12px;
   background-color: #333;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  display: inline-block; /* moved here */
+  display: inline-block;
   flex-direction: column;
   padding: 25px;
-  text-align: center;  /* moved here */
+  text-align: center;  
   text-decoration: none;
 }
 
@@ -39,9 +39,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.7rem;
   text-align: center;
-  color: white; /* Dark mode text color */
+  color: white; 
   text-decoration: none;
 }
 
@@ -56,19 +55,19 @@
 
 .address {
   display: block;
-  margin: auto;
+  margin: 24px auto 12px auto;
   height: 30px;
-  width: 330px;
+  width: 430px;
   padding: 20px 0px;
   text-align: center;
-  background-color: #555; /* Dark mode text field background color */
-  color: white; /* Dark mode text color */
+  background-color: #555; 
+  color: white; 
   text-decoration: none;
 }
 
 input[type="text"]:focus {
-  background-color: #777; /* Dark mode focused text field background color */
-  color: white; /* Dark mode text color */
+  background-color: #777; 
+  color: white; 
   text-decoration: none;
 }
 

@@ -1,68 +1,31 @@
+input[type="file"] {
+  display: none;
+}
 
-  
-  input[type="file"] {
-    display: none;
-  }
-  
-  /* Base styles */
-  /* Base styles */
-  body {
-    margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-  
-  /* Dark Mode Styling */
-  body {
-    background-color: #1a1a1a; /* Dark background color */
-    color: #ffffff; /* Light text color */
-  }
-  
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
 
-  
-  /* Textarea styles */
-  .textArea {
-    color: #ffffff; 
-    background-color: #333; 
-    border: none;
-    border-radius: 6px;
-    padding: 10px;
-    resize: vertical;
-    width: 100%;
-    min-height: 150px;
-  }
-  
-  .textArea:focus {
-    background-color: #555; 
-  }
-  
-  /* Upload button styles */
-  .upload {
-    border: 1px solid #13aa52;
-    background-color: #13aa52;
-    color: #ffffff;
-    padding: 5px 15px; 
-    border-radius: 6px;
-    margin-left: 10px;
-  }
-  
-  .upload:hover {
-    border: 1px solid #13aa52;
-    background-color: #1ead6b; /* Slightly darker green on hover */
-    color: #ffffff;
-  }
-  
-  .upload:disabled,
-  .upload[disabled] {
-    border: 1px solid #999999;
-    background-color: #cccccc;
-    color: #666666;
-    cursor: not-allowed;
-  }
-  
-  
-  div {
-    padding: 5px 10px;
-  }
-  
+.textArea {
+  color: #ffffff;
+  background-color: #333;
+  border: none;
+  border-radius: 6px;
+  padding: 10px;
+  resize: vertical;
+  width: 100%;
+  min-height: 150px;
+}
+
+.textArea:focus {
+  background-color: #555;
+}
+
+div {
+  padding: 5px 10px;
+}

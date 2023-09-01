@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import "./Modal.css";
 
 const ModalAbout = ({ setModalOpen}) => {
@@ -35,7 +34,7 @@ const ModalAbout = ({ setModalOpen}) => {
           </div>
 
           <div className="footer">
-            <button
+            <button className="button button-red"
               onClick={() => {
                 setModalOpen(false);
               }}

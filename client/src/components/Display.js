@@ -7,7 +7,7 @@ const Display = ({ contract, account, triggerFetch }) => {
   const [addressInput, setAddressInput] = useState("");
   const [addressInputTemp, setAddressInputTemp] = useState("");
 
-  const fetchData = useCallback(async () => {  // <-- wrap the function with useCallback
+  const fetchData = useCallback(async () => {  
     try {
       const targetAddress = addressInput || account;
       const dataArray = await contract.getFileList(targetAddress);
@@ -18,20 +18,20 @@ const Display = ({ contract, account, triggerFetch }) => {
     } catch (e) {
       alert("An error occurred while retrieving data");
     }
-  }, [addressInput, account, contract]);  // <-- dependencies of fetchData
+  }, [addressInput, account, contract]);  
 
 
   useEffect(() => {
     if (triggerFetch) {
       fetchData();
     }
-  }, [triggerFetch, fetchData]);  // <-- add fetchData to dependency array
+  }, [triggerFetch, fetchData]); 
 
   useEffect(() => {
     if (account) {
       fetchData();
     }
-  }, [account, fetchData]);  // <-- add fetchData to dependency array
+  }, [account, fetchData]); 
 
   const handleAddressInputChange = (e) => {
     setAddressInputTemp(e.target.value);
@@ -49,7 +49,7 @@ const Display = ({ contract, account, triggerFetch }) => {
         value={addressInputTemp}
         onChange={handleAddressInputChange}
       />
-      <button className="blue" onClick={handleAddressInputChangeSubmit}>
+      <button className="button button-blue" onClick={handleAddressInputChangeSubmit} style={{marginRight: "0"}}> 
         Get Data
       </button>
     </>
