@@ -203,3 +203,33 @@ header .overlay {
   color: rgba(255, 255, 255, 0.158);
   z-index: 1000;
 }
+
+
+/* For Webkit browsers like Chrome and Safari */
+::-webkit-scrollbar {
+  width: 8px;  /* width of the entire scrollbar */
+  height: 8px; /* height for horizontal scrollbar */
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(0,0,0,0.1); 
+  border-radius: 4px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0,0,0,0.2); 
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgba(0,0,0,0.05); 
+  border-radius: 4px;
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0,0,0,0.1) rgba(0,0,0,0.05);
+}

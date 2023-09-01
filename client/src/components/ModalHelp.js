@@ -7,14 +7,21 @@ const ModalHelp = ({ setModalOpen }) => {
         <div className="modalContainer">
           <div className="title"></div>
           <div className="body-text justify-text">
+
             <h5 className="instruction-title">Connecting to Sepolia Testnet on MetaMask:</h5>
             <p>Follow the instructions on <a className="link" href="https://www.alchemy.com/overviews/how-to-add-sepolia-to-metamask" target="_blank" rel="noopener noreferrer">this guide</a> to add Sepolia to your MetaMask wallet.</p>
-            
+
             <h5 className="instruction-title">Getting Free SepoliaETH:</h5>
             <ol className="instruction-list">
               <li>Visit <a className="link" href="https://sepoliafaucet.com/" target="_blank" rel="noopener noreferrer">Sepolia Faucet</a></li>
               <li>Follow instructions to get free SepoliaETH.</li>
             </ol>
+
+            <h5 className="instruction-title">Transaction Costs:</h5>
+            <p>Uploading a file, sharing access, or revoking access will open your MetaMask wallet for payment confirmation. This transaction costs SepoliaETH.</p>
+
+            <h5 className="instruction-title">WARNING!!!</h5>
+            <p>Blockchain transactions are immutable, meaning the file metadata and hash cannot be altered or deleted once uploaded to the blockchain.</p>
 
             <h5 className="instruction-title">Uploading a File:</h5>
             <ol className="instruction-list">
@@ -31,6 +38,12 @@ const ModalHelp = ({ setModalOpen }) => {
               <li>Recipient addresses will appear in a dropdown UI.</li>
             </ol>
 
+            <h5 className="instruction-title">Unsharing Files:</h5>
+            <ol className="instruction-list">
+              <li>Select a recipient's address from the dropdown in the "Share" window.</li>
+              <li>Click "Unshare" to revoke their access.</li>
+            </ol>
+
             <h5 className="instruction-title">Accessing Shared Files:</h5>
             <ol className="instruction-list">
               <li>Enter the sharer's address in the field at the bottom.</li>
@@ -42,16 +55,10 @@ const ModalHelp = ({ setModalOpen }) => {
               <li>Remove any address from the field at the bottom.</li>
               <li>Click "Get Data".</li>
             </ol>
-
           </div>
 
           <div className="footer">
-            <button className="button button-red"
-              onClick={() => {
-                setModalOpen(false);
-              }}
-              id="cancelBtn"
-            >
+            <button className="button button-red" onClick={() => { setModalOpen(false); }} id="cancelBtn" style={{ marginBottom: "-5px" }}>
               Close
             </button>
           </div>

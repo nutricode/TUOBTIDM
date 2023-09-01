@@ -88,6 +88,8 @@ input[type="text"]:focus {
   height: 60vh;
   overflow-y: auto;
   overflow-wrap: break-word;
+  margin-bottom: 20px;
+  margin-top: 0px;
 }
 
 

@@ -16,9 +16,17 @@ const Display = ({ contract, account, triggerFetch }) => {
       ));
       setData(previews);
     } catch (e) {
-      alert("An error occurred while retrieving data");
+      let userMessage = "An unknown error occurred while retrieving data";
+  
+      if (e.code === "CALL_EXCEPTION" && e.reason === "You don't have access") {
+        userMessage = "YOU DON'T HAVE ACCESS TO THIS ACCOUNT";
+      }
+  
+      alert(userMessage);
     }
-  }, [addressInput, account, contract]);  
+  }, [addressInput, account, contract]); 
+  
+  
 
 
   useEffect(() => {

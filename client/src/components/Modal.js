@@ -1,43 +1,35 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import "./Modal.css";
 
 const Modal = ({ setModalOpen, contract }) => {
-  
+  const [accessList, setAccessList] = useState([]);
+
   const sharing = async () => {
     const address = document.querySelector(".address").value;
     await contract.allow(address);
     setModalOpen(false);
   };
 
-  const stopSharing = async () => {
+  const unsharing = async () => {
     const select = document.querySelector("#selectNumber");
-    const selectedAddress = select.options[select.selectedIndex].value;
-    await contract.disallow(selectedAddress);
+    const address = select.value;
+    await contract.disallow(address);
     setModalOpen(false);
   };
 
   useEffect(() => {
-    const accessList = async () => {
-      const addressList = await contract.shareAccess();
-      let select = document.querySelector("#selectNumber");
-      const options = addressList;
-
-      for (let i = 0; i < options.length; i++) {
-        let opt = options[i];
-        let e1 = document.createElement("option");
-        e1.textContent = opt;
-        e1.value = opt;
-        select.appendChild(e1);
-      }
+    const fetchAccessList = async () => {
+      const list = await contract.shareAccess();
+      setAccessList(list);
     };
-    contract && accessList();
+    contract && fetchAccessList();
   }, [contract]);
 
   return (
     <>
       <div className="modalBackground">
         <div className="modalContainer">
-          <div className="title"   style={{fontSize: '26px'}} >Share with</div>
+          <div className="title"  style={{fontSize: '26px'}}>Share with</div>
           <div className="body">
             <input
               type="text"
@@ -48,20 +40,30 @@ const Modal = ({ setModalOpen, contract }) => {
           <form id="myForm">
             <select id="selectNumber" className="modal-select">
               <option className="address">People With Access</option>
+              {accessList.filter(access => access.access).map((access, index) => (
+                <option key={index} value={access.user}>
+                  {access.user}
+                </option>
+              ))}
             </select>
           </form>
           <div className="footer">
-            <button 
+            <button
               className="button button-red"
-              onClick={() => setModalOpen(false)}
+              onClick={() => {
+                setModalOpen(false);
+              }}
               id="cancelBtn"
             >
               Cancel
             </button>
-            <button className="button button-orange" onClick={stopSharing}>
-              Revoke
+            <button
+              className="button button-orange"
+              onClick={() => unsharing()}
+            >
+              Unshare
             </button>
-            <button className="button button-blue" onClick={sharing} style={{marginRight: '0px'}} >
+            <button className="button button-blue" onClick={() => sharing()} style={{marginRight: '0px'}}>
               Share
             </button>
             

@@ -39,6 +39,7 @@ const ModalAbout = ({ setModalOpen}) => {
                 setModalOpen(false);
               }}
               id="cancelBtn"
+              style = {{ marginBottom: "-5px"}}
             >
               Close
             </button>
