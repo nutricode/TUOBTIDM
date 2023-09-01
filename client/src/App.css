@@ -120,10 +120,22 @@ header .overlay {
 .button-red {
   background-color: #f44336;
   color: white;
+  margin-left: 0px ;
 }
 .button-red:hover {
   background-color: #e32e1d; 
 }
+
+.button-orange {
+  background-color: #FF7F50;
+  color: white;
+  margin-left: 21px ;
+  margin-right: 33px ;
+}
+.button-orange:hover {
+  background-color: #FF6347;
+}
+
 
 .button-loading {
   background-image: linear-gradient(90deg, transparent, rgba(0, 159, 253, 0.1), transparent);

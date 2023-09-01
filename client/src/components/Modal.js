@@ -1,11 +1,21 @@
 import { useEffect } from "react";
 import "./Modal.css";
+
 const Modal = ({ setModalOpen, contract }) => {
+  
   const sharing = async () => {
     const address = document.querySelector(".address").value;
     await contract.allow(address);
     setModalOpen(false);
   };
+
+  const stopSharing = async () => {
+    const select = document.querySelector("#selectNumber");
+    const selectedAddress = select.options[select.selectedIndex].value;
+    await contract.disallow(selectedAddress);
+    setModalOpen(false);
+  };
+
   useEffect(() => {
     const accessList = async () => {
       const addressList = await contract.shareAccess();
@@ -22,11 +32,12 @@ const Modal = ({ setModalOpen, contract }) => {
     };
     contract && accessList();
   }, [contract]);
+
   return (
     <>
       <div className="modalBackground">
         <div className="modalContainer">
-          <div className="title">Share with</div>
+          <div className="title"   style={{fontSize: '26px'}} >Share with</div>
           <div className="body">
             <input
               type="text"
@@ -35,24 +46,30 @@ const Modal = ({ setModalOpen, contract }) => {
             ></input>
           </div>
           <form id="myForm">
-            <select id="selectNumber" class="modal-select">
+            <select id="selectNumber" className="modal-select">
               <option className="address">People With Access</option>
             </select>
           </form>
           <div className="footer">
-            <button className="button button-red"
-              onClick={() => {
-                setModalOpen(false);
-              }}
+            <button 
+              className="button button-red"
+              onClick={() => setModalOpen(false)}
               id="cancelBtn"
             >
               Cancel
             </button>
-            <button className="button button-blue" onClick={() => sharing()}>Share</button>
+            <button className="button button-orange" onClick={stopSharing}>
+              Revoke
+            </button>
+            <button className="button button-blue" onClick={sharing} style={{marginRight: '0px'}} >
+              Share
+            </button>
+            
           </div>
         </div>
       </div>
     </>
   );
 };
+
 export default Modal;

@@ -87,15 +87,23 @@ function App() {
           onUploadSuccess={getdata}
         />
         <h1 style={{
-            fontSize: "80px", 
-            width: "100%", 
+            fontSize: "85px",
+            lineHeight: "95px", 
+            width: "100%",
             letterSpacing: "20px",
             marginLeft: "10px",
-            marginTop:"-5px" 
-          }}>
-            TUoBTiDM
-          </h1>
-        <h3 style={{ color: "white", marginTop:"-30px"}}>The Use of Blockchain Technology in Document Management</h3>
+            marginTop: "-5px",
+            fontFamily: "'Courier New', Courier, monospace",
+            color: 'white', 
+            background: 'linear-gradient(to right, #009FFD, #ffffff)',
+            WebkitBackgroundClip: 'text',
+            WebkitTextFillColor: 'transparent',
+            textShadow: '0px 3px 8px rgba(0,0,0,0.2)' 
+            }}>
+            TUo₿TiDM
+        </h1>
+
+        <h3 style={{ color: "lightgray", marginTop:"-30px" }}>The Use of Blockchain Technology in Document Management</h3>
         
         <Display
           contract={contract}
